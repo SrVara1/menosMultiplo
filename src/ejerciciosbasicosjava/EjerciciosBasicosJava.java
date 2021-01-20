@@ -73,18 +73,28 @@ public class EjerciciosBasicosJava {
     
     
     public boolean a5 ( int a, int b, int c){
-        if ( a-b == 10 || a-c ==10){
+        if ( a-b == 10 || a-c ==10){ // si a menos b o a menos c da 10 es true
             return true;
         }
-        if (b-a == 10|| b-c==10){
+        if (b-a == 10|| b-c==10){ //si b menos a o b menos c da 10 es true
             return true;
         }
-        if (c-a==10 || c-b==10){
+        if (c-a==10 || c-b==10){ //si c menos a o c menos b da 10 es true
             return true;
         }
       return false;  
     }
    
+    public boolean dosEnteros (int numero, int numero2){
+        
+        if (numero/10==numero2/10 || numero % 10 == numero2 % 10){//comparamos los numeros
+            return true;
+        }
+        if (numero/10==numero2 %10 || numero % 10 == numero2/10){//comparamos el primer digito del primer numero con el otro digito del otro  numero y viceversa
+            return true;
+        }
+        return false;
+    }
     
             
             
@@ -119,6 +129,11 @@ public class EjerciciosBasicosJava {
         System.out.println( ejercicio.a5(1,7,11));
         System.out.println( ejercicio.a5(1,7,10));
         System.out.println( ejercicio.a5(11,1,7));
+        
+         System.out.println("Ejercicio 06 dos Enteros:");
+        System.out.println( ejercicio.dosEnteros(12, 23));
+        System.out.println( ejercicio.dosEnteros(12, 43));
+        System.out.println( ejercicio.dosEnteros(12, 44));
     }
     
 }
