@@ -58,6 +58,26 @@ public class EjerciciosBasicosJava {
         return false;
     }
     
+    
+    
+    public boolean movil (boolean dormido, boolean matinal, boolean madre){
+        if(dormido){
+            return false;
+        }
+        if (matinal && madre){
+            return true ;
+        }
+        if (!dormido && !matinal && !madre){
+            return true;
+        }
+ 
+        return false;
+       
+    }
+
+    
+   
+    
     /**
      * @param args the command line arguments
      */
@@ -79,6 +99,11 @@ public class EjerciciosBasicosJava {
         System.out.println( ejercicio.muyVanidoso(22));
         System.out.println( ejercicio.muyVanidoso(23));
         System.out.println( ejercicio.muyVanidoso(24));
+        
+        System.out.println("Ejercicio 04 movil:");
+        System.out.println( ejercicio.movil(false, false, false));
+        System.out.println( ejercicio.movil(false, false, true));
+        System.out.println( ejercicio.movil(true, false, false));
     }
     
 }
