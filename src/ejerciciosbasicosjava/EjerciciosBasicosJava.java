@@ -60,24 +60,34 @@ public class EjerciciosBasicosJava {
     
     
     
-    public boolean movil (boolean dormido, boolean matinal, boolean madre){
-        if(dormido){
+    public boolean movil (boolean matinal, boolean madre, boolean dormido){
+        if(dormido){ // si esta dormido devuelve falso
             return false;
         }
-        if (matinal && madre){
-            return true ;
+        if (matinal && !madre){ // si es por la mañana y no es la madre, no contesta
+            return false ;
         }
-        if (!dormido && !matinal && !madre){
+
+        return true;
+    }
+    
+    
+    public boolean a5 ( int a, int b, int c){
+        if ( a-b == 10 || a-c ==10){
             return true;
         }
- 
-        return false;
-       
+        if (b-a == 10|| b-c==10){
+            return true;
+        }
+        if (c-a==10 || c-b==10){
+            return true;
+        }
+      return false;  
     }
-
-    
    
     
+            
+            
     /**
      * @param args the command line arguments
      */
@@ -104,6 +114,11 @@ public class EjerciciosBasicosJava {
         System.out.println( ejercicio.movil(false, false, false));
         System.out.println( ejercicio.movil(false, false, true));
         System.out.println( ejercicio.movil(true, false, false));
+        
+        System.out.println("Ejercicio 05 a5:");
+        System.out.println( ejercicio.a5(1,7,11));
+        System.out.println( ejercicio.a5(1,7,10));
+        System.out.println( ejercicio.a5(11,1,7));
     }
     
 }
