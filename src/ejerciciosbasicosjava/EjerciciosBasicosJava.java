@@ -11,6 +11,8 @@ package ejerciciosbasicosjava;
  */
 public class EjerciciosBasicosJava {
 
+    //ejercicios nivel 0
+    
     public boolean fiestaArdillas (int numBellotas, boolean finDeSemana){
         //si es fin de semana
         if(finDeSemana){
@@ -85,19 +87,32 @@ public class EjerciciosBasicosJava {
       return false;  
     }
    
-    public boolean dosEnteros (int numero, int numero2){
+    public boolean dosEnteros (int numero, int numero2){ //no guarda decimales
         
-        if (numero/10==numero2/10 || numero % 10 == numero2 % 10){//comparamos los numeros
+        if (numero/10==numero2/10 || numero % 10 == numero2 % 10){//comparando el primer digito del primer numero con el primer digito del segundo numero
             return true;
         }
-        if (numero/10==numero2 %10 || numero % 10 == numero2/10){//comparamos el primer digito del primer numero con el otro digito del otro  numero y viceversa
+        if (numero/10==numero2 %10 || numero % 10 == numero2/10){//comparamos el primer digito del primer numero con el segundo digito del segundo  numero y viceversa
             return true;
         }
         return false;
     }
-    
-            
-            
+ 
+    public boolean multiplo (int numero){
+         if (numero % 3 == 0 && numero % 5 ==0){
+            return false;
+        }
+        if (numero % 3 == 0 ){
+            return true;
+        }
+         if (numero % 5 == 0 ){
+            return true;
+        }
+          
+        return false;
+    }
+  
+               
     /**
      * @param args the command line arguments
      */
@@ -130,10 +145,16 @@ public class EjerciciosBasicosJava {
         System.out.println( ejercicio.a5(1,7,10));
         System.out.println( ejercicio.a5(11,1,7));
         
-         System.out.println("Ejercicio 06 dos Enteros:");
+        System.out.println("Ejercicio 06 dos Enteros:");
         System.out.println( ejercicio.dosEnteros(12, 23));
         System.out.println( ejercicio.dosEnteros(12, 43));
         System.out.println( ejercicio.dosEnteros(12, 44));
+        
+        System.out.println("Ejercicio 07 multiplo:");
+        System.out.println( ejercicio.multiplo(3));
+        System.out.println( ejercicio.multiplo(10));
+        System.out.println( ejercicio.multiplo(15));
     }
     
 }
+
