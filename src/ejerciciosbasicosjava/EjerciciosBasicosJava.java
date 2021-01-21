@@ -99,19 +99,46 @@ public class EjerciciosBasicosJava {
     }
  
     public boolean multiplo (int numero){
-         if (numero % 3 == 0 && numero % 5 ==0){
+         if (numero % 3 == 0 && numero % 5 ==0){ ////si el numero es multiplo de 3 y de 5, devolvemos false
             return false;
         }
-        if (numero % 3 == 0 ){
+        if (numero % 3 == 0 ){ //si el numero es multiplo de 3, devolvemos true
             return true;
         }
-         if (numero % 5 == 0 ){
+         if (numero % 5 == 0 ){//si el numero es multiplo de 5, devolvemos true
             return true;
         }
           
         return false;
     }
   
+    
+    public boolean menosmultiplo (int numero){
+        
+     
+        if (numero % 20==19 || numero % 20==18 ){
+            return true;
+        }
+        
+        return false;
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
                
     /**
      * @param args the command line arguments
@@ -154,6 +181,12 @@ public class EjerciciosBasicosJava {
         System.out.println( ejercicio.multiplo(3));
         System.out.println( ejercicio.multiplo(10));
         System.out.println( ejercicio.multiplo(15));
+        
+        System.out.println("Ejercicio 08 menosmultiplo:");
+        System.out.println( ejercicio.menosmultiplo(18));
+        System.out.println( ejercicio.menosmultiplo(19));
+        System.out.println( ejercicio.menosmultiplo(20));
+      
     }
     
 }
