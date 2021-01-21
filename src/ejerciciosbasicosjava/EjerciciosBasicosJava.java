@@ -105,7 +105,7 @@ public class EjerciciosBasicosJava {
         if (numero % 3 == 0 ){ //si el numero es multiplo de 3, devolvemos true
             return true;
         }
-         if (numero % 5 == 0 ){//si el numero es multiplo de 5, devolvemos true
+        if (numero % 5 == 0 ){//si el numero es multiplo de 5, devolvemos true
             return true;
         }
           
@@ -116,30 +116,20 @@ public class EjerciciosBasicosJava {
     public boolean menosmultiplo (int numero){
         
      
-        if (numero % 20==19 || numero % 20==18 ){
+        if (numero % 20==19 || numero % 20==18 ){ //comprobamos si el multiplo de 20 es 19 o el multiplo de 20 es 18 devolvemos true
             return true;
         }
         
         return false;
     }
     
+    public boolean loteria (int loteria){
+        return 
     
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-               
+  
     /**
      * @param args the command line arguments
      */
